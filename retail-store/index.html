@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Store · Simple Sales</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-store"></i> Retail Store
+            </div>
+            <ul class="nav-menu">
+                <a href="https://edem-justice-my-website.netlify.app" class="nav-link">
+                    <i class="fas fa-folder-open"></i> View Portfolio
+                </a>
+                <li><a href="#" onclick="window.location.reload();" class="nav-link active">
+                    <i class="fas fa-store"></i> Retail Store
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+<div class="store-container">
+    <!-- Header -->
+    <header class="store-header">
+        <h1><i class="fas fa-store-alt"></i> Retail<span style="font-weight:300; color:#3b82f6;">+</span></h1>
+        <div class="cart-summary">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count-badge" id="cartCount">0</span>
+            <span class="cart-total" id="cartTotalDisplay">$0.00</span>
+        </div>
+    </header>
+
+    <!-- Main sales panel -->
+    <div class="sales-panel">
+        <!-- Product section -->
+        <div>
+            <div style="margin-bottom: 1rem; font-weight:500; color:#334155; display: flex; gap: 0.4rem;">
+                <i class="fas fa-tag" style="color:#3b82f6;"></i> Products
+            </div>
+            <div class="product-grid" id="productGrid">
+                <!-- Products injected by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Cart section -->
+        <div class="cart-panel">
+            <h2><i class="fas fa-receipt" style="color:#3b82f6;"></i> Sale cart</h2>
+            <div class="cart-items" id="cartItemsContainer">
+                <div class="empty-cart-message"> <i class="fas fa-bag-shopping"></i> Cart is empty</div>
+            </div>
+
+            <div class="cart-total-row">
+                <span>Total</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+
+            <div class="checkout-area">
+                <button class="checkout-btn" id="checkoutBtn"><i class="fas fa-credit-card"></i> Checkout</button>
+                <button class="clear-btn" id="clearCartBtn"><i class="fas fa-trash-alt"></i> Clear</button>
+            </div>
+            <div class="footer-message">
+                <i class="fas fa-arrow-up"></i> click product to add
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Link to external JavaScript file -->
+<script src="script.js"></script>
+</body>
+</html>
